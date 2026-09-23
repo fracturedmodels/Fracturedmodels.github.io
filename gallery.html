@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery page</title>
+
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single:wght@100..900&family=Comfortaa:wght@300..700&family=Frijole&family=Honk:MORF@15&display=swap" rel="stylesheet">
+ 
+ <!-- THIS LINK CONNECTS YOUR CSS TO THIS PAGE -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+ <!-- Hotbar Navigation -->
+  <header class="top-nav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ <!-- MAIN GALLERY CONTENT -->
+  <main class="content">
+    <h1 class="blood-header">Art Gallery</h1>
+    <h2>Explore my featured collections and browse work by year below.</h2>
+
+    <!-- SECTION 1: FEATURED HIGHLIGHTS SLIDESHOW -->
+    <section class="gallery-slideshow-section">
+      <h2>Featured Showcase</h2>
+      <div class="slideshow-container">
+        
+        <div class="myGallerySlides">
+          <img src="art/Screenshot 2026-07-17 123922.png" alt="Featured Piece 1">
+          <p class="caption">Featured Artwork 1 - Recent Highlight</p>
+        </div>
+
+        <div class="myGallerySlides">
+          <img src="art/BCO.a0aeeea8-ac8b-48fe-885c-1ef4ae3895e6.png" alt="Featured Piece 2">
+          <p class="caption">Featured Artwork 2 - Concept Design</p>
+        </div>
+
+        <div class="myGallerySlides">
+          <img src="art/BCO.28fb7100-a1b1-46e7-befb-c6d9475e6e98.png" alt="Featured Piece 3">
+          <p class="caption">Featured Artwork 3 - Fine Art Study</p>
+        </div>
+
+        <button class="prev" onclick="plusGallerySlides(-1)" aria-label="Previous Slide">&#10094;</button>
+        <button class="next" onclick="plusGallerySlides(1)" aria-label="Next Slide">&#10095;</button>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- SECTION 2: DROPDOWN TIMELINE ACCORDION -->
+    <section class="timeline-dropdowns">
+      <h2>Archive & Works by Era</h2>
+
+      <!-- DROPDOWN 1: 2026 (Open by default) -->
+      <details class="era-dropdown" open>
+        <summary class="era-title">2026 — Present (Recent Works)</summary>
+        <div class="era-content">
+          <p>Focusing on high-concept digital painting and complex compositions.</p>
+          
+          <div class="gallery-grid">
+            <div class="art-card">
+              <img src="art/Screenshot 2026-07-17 123922.png" alt="2026 Project A">
+              <div class="art-info">
+                <h4>Project Title A</h4>
+                <h2>Digital Media | Jan 2026</h2>
+              </div>
+            </div>
+
+            <div class="art-card">
+              <img src="images/art2.jpg" alt="2026 Project B">
+              <div class="art-info">
+                <h4>Project Title B</h4>
+                <h2>Mixed Media | March 2026</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+                  <div class="gallery-grid">
+            <div class="art-card">
+              <img src="art/Screenshot 2026-07-17 123922.png" alt="2026 Project A">
+              <div class="art-info">
+                <h4>Project Title A</h4>
+                <h2>Digital Media | Jan 2026</h2>
+              </div>
+            </div>
+
+            <div class="art-card">
+              <img src="images/art2.jpg" alt="2026 Project B">
+              <div class="art-info">
+                <h4>Project Title B</h4>
+                <h2>Mixed Media | March 2026</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+      
+
+      <!-- DROPDOWN 2: 2025 -->
+      <details class="era-dropdown">
+        <summary class="era-title">2025 — Traditional Studies</summary>
+        <div class="era-content">
+          <p>A deep dive into oil painting, anatomy studies, and traditional sketchbook work.</p>
+          
+          <div class="gallery-grid">
+            <div class="art-card">
+              <img src="images/art3.jpg" alt="2025 Project C">
+              <div class="art-info">
+                <h4>Project Title C</h4>
+                <h2>Oil on Canvas | 2025</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- DROPDOWN 3: 2024 -->
+      <details class="era-dropdown">
+        <summary class="era-title">2024 & Earlier — Foundational Works</summary>
+        <div class="era-content">
+          <p>Early explorations in digital art and figure drawing studies.</p>
+          
+          <div class="gallery-grid">
+            <div class="art-card">
+              <img src="images/art1.jpg" alt="2024 Project D">
+              <div class="art-info">
+                <h4>Project Title D</h4>
+                <h2>Sketchbook Study | 2024</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
+    </section>
+  </main>
+
+  <!-- JAVASCRIPT FOR GALLERY SLIDESHOW -->
+  <script>
+    let gallerySlideIndex = 1;
+    showGallerySlides(gallerySlideIndex);
+
+    function plusGallerySlides(n) {
+      showGallerySlides(gallerySlideIndex += n);
+    }
+
+    function showGallerySlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("myGallerySlides");
+      if (n > slides.length) { gallerySlideIndex = 1; }
+      if (n < 1) { gallerySlideIndex = slides.length; }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[gallerySlideIndex - 1].style.display = "block";
+    }
+
+   
+  // Open enlarged modal when clicking any art card
+  document.querySelectorAll('.art-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const img = card.querySelector('img');
+      const info = card.querySelector('.art-info');
+      
+      const modal = document.getElementById('image-modal');
+      const modalImg = document.getElementById('modal-img');
+      const modalCaption = document.getElementById('modal-caption');
+
+      if (img) {
+        modalImg.src = img.src;
+        modalImg.alt = img.alt || '';
+        
+        // Use text from .art-info if available, or image alt text
+        modalCaption.textContent = info ? info.textContent.trim() : (img.alt || '');
+        
+        modal.style.display = 'flex';
+      }
+    });
+  });
+
+  // Close modal function
+  function closeModal() {
+    document.getElementById('image-modal').style.display = 'none';
+  }
+
+  // Close modal when pressing ESC key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeModal();
+    }
+  });
+  </script>
+
+ <!-- LIGHTBOX MODAL OVERLAY -->
+  <div id="image-modal" class="modal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img class="modal-content" id="modal-img" alt="Enlarged Artwork">
+    <div id="modal-caption" class="modal-caption"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Fractured models. last updated 9/23/26.</p>
+  </footer>
+
+</body>
+</html>
