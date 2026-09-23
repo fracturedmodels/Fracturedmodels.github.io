@@ -14,7 +14,7 @@ body {
   /* FRUTIGER AERO SPACE / NEBULA BACKGROUND WITH MASK */
   background-image: 
     linear-gradient(45deg, rgba(60, 11, 92, 0.6) 0%, rgba(29, 16, 201, 0.45) 100%),
-    url('https://i.imgur.com/m9tpEPw.jpeg');
+    url('../art/hubble-ngc2298-acs-wfc3-v3-5fcont-final.jpg');
 
   background-size: cover;
   background-position: center;
@@ -75,7 +75,7 @@ body {
   padding: 8px 22px;
   margin: 4px 6px;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 0.95rem;
   text-decoration: none;
   text-shadow: 0 1px 3px rgba(0, 25, 60, 0.9);
@@ -189,69 +189,49 @@ p {
     0 0 25px rgba(13, 1, 58, 0.2);
 }
 
+/* settings for mobile and other sites*/
+
 .video-item {
-  width: 100% !important;
-  max-width: 100% !important; /* Change to 1000px if your images have a specific cap */
-  margin: 0 auto 20px auto !important;
+  width: 100%;
+  max-width: 1000px; /* Adjust to match your photo card width */
+  margin: 20px auto;
 }
 
 .video-container {
-  position: relative !important;
-  width: 100% !important;
-  padding-bottom: 56.25% !important; /* 16:9 aspect ratio */
-  height: 0 !important;
-  overflow: hidden !important;
-  border-radius: 16px !important; /* Matches your glassmorphism card corners */
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5) !important;
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Keeps 16:9 widescreen ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 .video-container iframe {
-  position: absolute !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  border: 0 !important;
-}
-
-
-/*
-
-/*Glass Side Pillars (Creates frosted glass wings framing the artwork) 
-.slideshow-container::before,
-.slideshow-container::after {
-  content: "";
   position: absolute;
   top: 0;
-  bottom: 0;
-  width: 48px;
-  z-index: 5;
-  pointer-events: none; /* Allows clicking through to buttons if needed 
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-.slideshow-container::before {
   left: 0;
-  background: linear-gradient(
-    90deg, 
-    rgba(255, 255, 255, 0.25) 0%, 
-    rgba(255, 255, 255, 0.08) 60%, 
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
-.slideshow-container::after {
-  right: 0;
-  background: linear-gradient(
-    -90deg, 
-    rgba(255, 255, 255, 0.25) 0%, 
-    rgba(255, 255, 255, 0.08) 60%, 
-    rgba(255, 255, 255, 0) 100%
-  );
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
-}*/
+/*glass effect on moblie */
+
+.glass-card, 
+.gallery-item, 
+.hero-header {
+  /* Glassmorphic Background */
+  background: rgba(255, 255, 255, 0.15);
+  
+  /* Required for iOS Safari Glass Effect */
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+}
 
 /* Slide Wrapper & Images */
 .mySlides,
@@ -272,20 +252,6 @@ p {
   display: block;
 }
 
-/* Cinematic Darkening Vignette Overlay 
-.mySlides::after,
-.myGallerySlides::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    circle at center, 
-    rgba(0, 0, 0, 0) 50%, 
-    rgba(0, 10, 30, 0.55) 100%
-  );
-  pointer-events: none;
-}
-
 /* atp just extra bullshit for contacts*/
 .contact-container {
   max-width: 650px;
@@ -298,7 +264,7 @@ p {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-top: 1px solid rgba(11, 9, 148, 0.7);
+  border-top: 1px solid rgba(102, 100, 233, 0.7);
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
@@ -363,9 +329,9 @@ p {
   padding: 14px 18px; /* Comfortable typing space inside inputs */
   font-family: inherit;
   font-size: 1rem;
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #78b4ec;
+  background: rgba(165, 94, 187, 0.08);
+  border: 1px solid rgba(31, 9, 73, 0.952);
   border-radius: 10px;
   box-sizing: border-box; /* Ensures padding stays within width bounds */
 }
@@ -477,9 +443,8 @@ p {
 /* 5. GALLERY GRID LAYOUT */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
-  align-items: start;
   margin-top: 20px;
   /* Adds extra padding around the grid so border glows don't get cut off at container edges */
   padding: 10px;
@@ -592,8 +557,6 @@ p {
     0 0 15px rgba(0, 180, 255, 0.6);
   transform: translateY(-2px);
 }
-
-/* grid box settings */
 
 /* Darkened Glass Backdrop */
 .modal {
@@ -731,8 +694,6 @@ p {
   to { transform: scale(1); opacity: 1; }
 }
 
-/*bloody font*/
-
 /* 3D GLISTENING BLOOD TEXT STYLING FOR BUTCHERMAN */
 .blood-header {
   font-family: 'frijole', cursive;
@@ -777,4 +738,257 @@ p {
     drop-shadow(3px 3px 0px #0a0000)
     /* Pure dark cast shadow (no red glow) */
     drop-shadow(0 10px 18px rgba(0, 0, 0, 0.95));
+    }
+
+  /* Prevent Horizontal Page Overflow */
+  html, body {
+   /* overflow-x: hidden; */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE / Edge */
+  }
+
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+
+
+/* ==========================================
+   TARGETED MOBILE OVERRIDES (Screens <= 768px)
+   ========================================== */
+@media screen and (max-width: 768px) {
+
+ html, body {
+     overflow-x: hidden;
+  }
+
+  /* 1. Fix Nav Bar Overflow (Stack or Wrap Buttons Neatly) */
+  .navbar, .nav-container, nav {
+      position: fixed !important;
+     
+     top: 0px !important;
+     left: 50% !important;
+     transform: translateX(-50%) !important;
+     width: 92% !important;
+     max-width: 100% !important;
+     height: auto !important;
+     min-height: unset !important;
+     padding: 2px 8px !important;
+
+     display: flex !important;
+     align-items: center !important;
+     justify-content: center !important;
+     box-sizing: border-box !important;
+  }
+
+ .top-nav {
+      position: fixed !important;
+     
+     top: 60px !important;
+     left: 50% !important;
+     transform: translateX(-50%) !important;
+     width: 92% !important;
+     max-width: 100% !important;
+     height: auto !important;
+     min-height: unset !important;
+     padding: 15px 8px !important;
+
+     display: flex !important;
+     align-items: center !important;
+     justify-content: center !important;
+     box-sizing: border-box !important;
+  }
+
+ .top-nav ul {
+    display: flex !important;
+    flex-wrap: wrap !important; /* Lets buttons wrap to next line instead of floating off-screen */
+    justify-content: center !important; /* Centers nav links horizontally */
+    align-items: center !important;
+    gap: 6px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+  }
+
+ /* 3. Button Sizing */
+  .top-nav a, nav a, .nav-btn, .navbar a {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.67rem !important;
+    line-height: 1 !important;
+    font-weight: 300 !important;
+
+    /* INCREASE TOP PADDING HERE */
+    padding-top: 8px !important;    /* Raised from default 6px to push text down */
+    padding-bottom: 5px !important; /* Slightly reduced bottom padding to keep button balanced */
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    border-radius: 12px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Adjust Main Content Top Margin for Mobile Nav Height */
+  .content {
+    width: 88% !important;     /* Slightly skinnier width on mobile screens */
+    max-width: 450px !important; /* Prevents the grid/container from stretching too wide */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+/* Target Contact Box / Content Containers */
+  .contact-box,
+  .contact-card,
+  .contact-content,
+  #contact {
+    width: 82% !important;           /* Makes the box skinnier across mobile screens */
+    max-width: 380px !important;     /* Hard cap on total width */
+    margin-left: auto !important;    /* Keeps the box centered horizontally */
+    margin-right: auto !important;
+    padding: 16px 20px !important;   /* Comfortable padding for inner content */
+    box-sizing: border-box !important;
+  }
+
+  .contact-page,
+  .contact-container,
+  .contact-wrapper,
+  #contact,
+  body.contact .content {
+    width: 87% !important;           /* Makes the box skinnier across mobile screens */
+    max-width: 400px !important;     /* Hard cap on total width */
+    margin-top: 110px !important;    /* Increases clearance below fixed nav bar */
+    padding-top: 20px !important;    /* Inner top padding above contact box/title */
+  } 
+
+  /*  Smaller Heading & Body Text Sizes */
+  h1, .blood-header {
+    font-size: 1.6rem !important;
+    text-align: center !important;
+    letter-spacing: 1px !important;
+    transform: none !important;
+  }
+
+  h2 {
+    font-size: 1.2rem !important;
+    text-align: center !important;
+  }
+
+  p {
+    font-size: 0.85rem !important;
+    text-align: center !important;
+  }
+
+ /* Target all common caption classes & HTML figcaption tags */
+  caption,
+  figcaption,
+  .caption,
+  .image-caption,
+  .card-caption,
+  .art-caption {
+    font-size: 0.72rem !important;  /* Reduced font size for mobile */
+    line-height: 1.25 !important;    /* Compact line spacing */
+    padding: 4px 8px !important;    /* Tightened inner padding */
+    margin-top: 4px !important;     /* Small gap below image/card */
+    max-width: 90% !important;      /* Keeps text contained neatly */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 4. Center Grid Layout & Fix Image Visibility */
+  .gallery-grid, .art-grid, .grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Centers every image/card container */
+    justify-content: center !important;
+    width: 100% !important;
+    gap: 20px !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    width: 88% !important;     /* Slightly skinnier width on mobile screens */
+    max-width: 450px !important; /* Prevents the grid/container from stretching too wide */
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Ensure Image Containers Scale Properly */
+  .gallery-item, .art-card, .glass-card, .video-item {
+    width: 100% !important;
+    max-width: 500px !important; /* Prevents items from stretching awkwardly */
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Force Images to Remain Visible & Scaled Within Card */
+  .gallery-item img, .art-card img, .glass-card img {
+    width: 100% !important;
+    height: auto !important; /* Preserves natural image aspect ratio */
+    max-height: none !important; /* Prevents clipping */
+    display: block !important;
+    object-fit: contain !important;
+  }
+
+  /* Target email container wrappers */
+  .email-container,
+  .email-wrapper,
+  .email-box,
+  .contact-email {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 8px 12px !important;    /* Compact inner padding for narrow screens */
+    box-sizing: border-box !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    overflow: hidden !important;     /* Prevents layout overflow */
+  }
+
+  /* Target the email link or text itself */
+  .email-container a,
+  .email-wrapper a,
+  .email-box a,
+  .contact-email a,
+  a[href^="mailto:"] {
+    font-size: 0.88rem !important;    /* Scaled down text size to fit screen width */
+    line-height: 1.2 !important;
+  }
+
+  /* Slightly Smaller Mobile Social Media Buttons/Icons */
+  .social-buttons a,
+  .social-links a,
+  .social-icons a,
+  .social-media a,
+  .social-icon {
+    width: auto !important;          /* Lets button widen naturally to fit text */
+    min-width: 36px !important;      /* Ensures single icon buttons remain square/round */
+    height: auto !important;         /* Allows vertical growth if needed */
+    min-height: 36px !important;
+    
+    /* PADDING & ALIGNMENT */
+    padding: 6px 12px !important;    /* Inner padding keeps text away from container edges */
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    
+    /* TEXT SIZING & CONTAINMENT */
+    font-size: 0.80rem !important;   /* Comfortable text size */
+    line-height: 1.1 !important;
+    white-space: nowrap !important;   /* Prevents awkward single-word breaks */
+    box-sizing: border-box !important;
+  }
+
+  /* Shrink Inline SVG/Img Icons Inside Social Buttons */
+  .social-buttons img,
+  .social-links img,
+  .social-icons img,
+  .social-buttons svg,
+  .social-links svg,
+  .social-icons svg {
+    width: 18px !important;
+    height: 18px !important;
+    margin-right: 6px !important;    /* Space between icon and text */
+    flex-shrink: 0 !important;      /* Prevents icon from squishing */
+  }
+
 }
