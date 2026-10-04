@@ -266,10 +266,8 @@ p {
 .contact-container {
   max-width: 650px;
   margin: 100px auto;
-  padding: 40px 32px; /* Inner padding prevents text from touching glass borders */
+  padding: 40px 32px;
   text-align: center;
-  
-  
   background: rgba(10, 25, 50, 0.55);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
@@ -435,19 +433,15 @@ p {
           drop-shadow(0 0 22px rgba(0, 150, 255, 0.7)); /* Glass glow */
 }
 
-.mySlides,
+/*.mySlides,
 .myGallerySlides {
   display: none;
   animation: fadeEffect 0.8s ease-in-out;
 }
-
+*/
 @keyframes fadeEffect {
-  from {
-    opacity: 0.3;
-  }
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0.3; }
+  to { opacity: 1; }
 }
 
 /* 5. GALLERY GRID LAYOUT */
@@ -467,6 +461,7 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
 }
 
 .art-card:hover {
@@ -750,17 +745,17 @@ p {
     drop-shadow(0 10px 18px rgba(0, 0, 0, 0.95));
     }
 
-  /* Prevent Horizontal Page Overflow */
+  /* Prevent Horizontal Page Overflow 
   html, body {
-   /* overflow-x: hidden; */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE / Edge */
+   /* overflow-x: hidden; 
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
   }
 
   html::-webkit-scrollbar,
   body::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-  }
+    display: none; */
+  
 
 
 /* ==========================================
@@ -768,8 +763,11 @@ p {
    ========================================== */
 @media screen and (max-width: 768px) {
 
-/* html, body {
-     overflow-x: hidden;
+ /* Force full viewport coverage safely beneath notches/Dynamic Islands */
+  body {
+    width: 100% !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
   }
 
   /* 1. Fix Nav Bar Overflow (Stack or Wrap Buttons Neatly) */
