@@ -85,8 +85,7 @@ body::-webkit-scrollbar {
   list-style: none;
   padding: 8px 18px;
 } */
-.top-nav ul,
-.top-nav nav ul {
+.top-nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,8 +94,7 @@ body::-webkit-scrollbar {
 }
 
 
-.top-nav a,
-.top-nav nav ul li a {
+.top-nav a {
   display: block;
   padding: 8px 22px;
   margin: 4px 6px;
