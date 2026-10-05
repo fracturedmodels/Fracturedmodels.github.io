@@ -105,11 +105,11 @@ body::-webkit-scrollbar {
 .top-nav a,
 .top-nav nav ul li a {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 14px 32px !important;
   margin: 6px 10px;
   color: #ffffff;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.2rem !important;
   text-decoration: none;
   text-shadow: 0 1px 3px rgba(0, 25, 60, 0.9);
   border-radius: 24px; /* Bubble Pill buttons */
