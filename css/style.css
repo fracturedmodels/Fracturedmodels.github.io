@@ -10,24 +10,29 @@ html, body {
   min-height: 100dvh;
   overflow-x: hidden;
   font-family: 'Bitcount Single', 'honk','comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ffffff;
+color: #ffffff;
   line-height: 1.6;
+  background-color: #0b1d3a; /* Fallback */
+  text-align: center;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
-
-  /* FRUTIGER AERO SPACE / NEBULA BACKGROUND WITH MASK */
-background-image: 
+/* LOCKS THE BACKGROUND IMAGE TO THE FULL VIEWPORT ON IOS */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background-image: 
     linear-gradient(45deg, rgba(60, 11, 92, 0.6) 0%, rgba(29, 16, 201, 0.45) 100%),
     url('../art/hubble-ngc2298-acs-wfc3-v3-5fcont-final.jpg');
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #0b1d3a;
-  
-  text-align: center;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE / Edge */
+  z-index: -1; /* Pushes the background behind all your content */
 }
 
 html::-webkit-scrollbar,
