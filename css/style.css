@@ -32,7 +32,7 @@ body::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  z-index: -1; /* Pushes the background behind all your content */
+  z-index: 0; /* Pushes the background behind all your content */
 }
 
 html::-webkit-scrollbar,
