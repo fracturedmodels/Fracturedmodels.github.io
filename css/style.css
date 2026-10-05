@@ -85,23 +85,31 @@ body::-webkit-scrollbar {
   list-style: none;
   padding: 8px 18px;
 } */
-
+.top-nav ul,
 .top-nav nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
-  padding: 6px 10px; /* Adds breathing room around the buttons inside the bar */
+  list-style-type: none;
+  padding: 8px 14px; /* Adds breathing room around the buttons inside the bar */
   margin: 0;
 }
 
-.top-nav  nav ul li a {
-  display: block;
-  padding: 12px 30px;
-  margin: 6px 8px;
+.top-nav li,
+.top-nav nav ul li {
+  list-style: none !important;
+  list-style-type: none !important;
+}
+
+.top-nav a,
+.top-nav nav ul li a {
+  display: inline-block;
+  padding: 14px 32px;
+  margin: 6px 10px;
   color: #ffffff;
   font-weight: 600;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   text-decoration: none;
   text-shadow: 0 1px 3px rgba(0, 25, 60, 0.9);
   border-radius: 24px; /* Bubble Pill buttons */
@@ -137,7 +145,7 @@ body::-webkit-scrollbar {
 /* 3. MAIN CONTENT CONTAINER (GLASSERAMIC CARD) */
 .content {
   max-width: 1000px;
-  margin: 110px auto 40px auto;
+  margin: 130px auto 40px auto;
   padding: 35px;
   background: linear-gradient(
     135deg, 
