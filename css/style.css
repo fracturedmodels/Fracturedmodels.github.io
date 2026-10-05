@@ -28,7 +28,7 @@ body::before {
   height: 100dvh;
   background-image: 
     linear-gradient(45deg, rgba(60, 11, 92, 0.6) 0%, rgba(29, 16, 201, 0.45) 100%),
-    url('https://imgur.com/a/nasa-back-UEcKt5o');
+    url('https://imgur.com/a/nasa-back-UEcKt5o.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
