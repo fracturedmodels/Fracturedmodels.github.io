@@ -5,20 +5,20 @@
   box-sizing: border-box;
 }
 
-html, body {
+/*html, body {
   width: 100%;
   min-height: 100dvh;
   overflow-x: hidden;
   font-family: 'Bitcount Single', 'honk','comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 color: #ffffff;
   line-height: 1.6;
-  background-color: #0b1d3a; /* Fallback */
+  background-color: #0b1d3a;
   text-align: center;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
-/* LOCKS THE BACKGROUND IMAGE TO THE FULL VIEWPORT ON IOS */
+
 body::before {
   content: "";
   position: fixed;
@@ -32,12 +32,32 @@ body::before {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Locks the background texture in place */
+  background-attachment: fixed; 
   background-color: #0b1d3a;
 }
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
+  display: none; 
+} */
+
+body {
+  font-family: 'Bitcount Single', 'honk','comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  line-height: 1.6;
+
+
+  /* FRUTIGER AERO SPACE / NEBULA BACKGROUND WITH MASK */
+  background-image: 
+    linear-gradient(45deg, rgba(60, 11, 92, 0.6) 0%, rgba(29, 16, 201, 0.45) 100%),
+    url('../art/hubble-ngc2298-acs-wfc3-v3-5fcont-final.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #0b1d3a;
+  
+  text-align: center;
 }
 
 /* 2. CLASSIC EARLY-2000s RETRO-GLOSS TOP HOTBAR */
