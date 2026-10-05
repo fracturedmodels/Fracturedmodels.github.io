@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/*html, body {
+html, body {
   width: 100%;
   min-height: 100dvh;
   overflow-x: hidden;
@@ -38,36 +38,16 @@ body::before {
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none; 
-} */
-
-body {
-  font-family: 'Bitcount Single', 'honk','comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #ffffff;
-  line-height: 1.6;
-
-
-  /* FRUTIGER AERO SPACE / NEBULA BACKGROUND WITH MASK */
-  background-image: 
-    linear-gradient(45deg, rgba(60, 11, 92, 0.6) 0%, rgba(29, 16, 201, 0.45) 100%),
-    url('../art/hubble-ngc2298-acs-wfc3-v3-5fcont-final.jpg');
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: #0b1d3a;
-  
-  text-align: center;
-}
+} 
 
 /* 2. CLASSIC EARLY-2000s RETRO-GLOSS TOP HOTBAR */
 .top-nav {
   position: fixed;
-  top: 12px;
+  top: 15px;
   left: 50%;
   transform: translateX(-50%);
-  width: 92%;
-  max-width: 1100px;
+  width: 95%;
+  max-width: 1250px;
   z-index: 1000;
 
 
@@ -82,7 +62,7 @@ body {
   /* Glassmorphism Blur */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 14px;
+  border-radius: 16px;
 
   /* RETRO WEBSITE BEZEL BORDER (3D Raised Light-Refracting Edge) */
   border-top: 2px solid #1172f0;
@@ -106,16 +86,25 @@ body {
   padding: 8px 18px;
 } */
 
+.top-nav nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 6px 10px; /* Adds breathing room around the buttons inside the bar */
+  margin: 0;
+}
+
 .top-nav  nav ul li a {
   display: block;
-  padding: 8px 22px;
-  margin: 4px 6px;
+  padding: 12px 30px;
+  margin: 6px 8px;
   color: #ffffff;
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 600;
+  font-size: 1.15rem;
   text-decoration: none;
   text-shadow: 0 1px 3px rgba(0, 25, 60, 0.9);
-  border-radius: 20px; /* Bubble Pill buttons */
+  border-radius: 24px; /* Bubble Pill buttons */
   
   /* Subtle glassy button style */
   background: linear-gradient(
