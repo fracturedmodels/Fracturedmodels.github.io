@@ -7,7 +7,7 @@
 
 html, body {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
   font-family: 'Bitcount Single', 'honk','comfortaa', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #ffffff;
@@ -766,7 +766,7 @@ p {
  /* Force full viewport coverage safely beneath notches/Dynamic Islands */
   body {
     width: 100% !important;
-    min-height: 100vh !important;
+    min-height: 100dvh !important;
     overflow-x: hidden !important;
   }
 
@@ -791,14 +791,14 @@ p {
 
 .top-nav {
     position: fixed !important;
-    top: env(safe-area-inset-top, 10px) !important;
+    top: 10px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     width: 94% !important;
     max-width: 480px !important;
     padding: 8px 6px !important;
     border-radius: 12px !important;
-  }
+  }}
   
  .top-nav ul {
     display: flex !important;
@@ -829,12 +829,13 @@ p {
 
   /* Adjust Main Content Top Margin for Mobile Nav Height */
   .content {
-    width: 92% !important;     /* Slightly skinnier width on mobile screens */
-    max-width: 460px !important; /* Prevents the grid/container from stretching too wide */
-    margin: 95px auto 30px auto !important;
+    width: 92% !important;
+    max-width: 460px !important;
+    margin: 85px auto 40px auto !important; /* Reduced top margin to remove dead space */
     padding: 20px 16px !important;
     box-sizing: border-box !important;
   }
+ 
 
 
   /* Contact Containers */
