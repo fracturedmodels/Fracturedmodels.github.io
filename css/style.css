@@ -43,11 +43,11 @@ body::-webkit-scrollbar {
 /* 2. CLASSIC EARLY-2000s RETRO-GLOSS TOP HOTBAR */
 .top-nav {
   position: fixed;
-  top: 15px;
+  top: 12px;
   left: 50%;
   transform: translateX(-50%);
-  width: 95%;
-  max-width: 1250px;
+  width: 92%;
+  max-width: 1100px;
   z-index: 1000;
 
 
@@ -62,7 +62,7 @@ body::-webkit-scrollbar {
   /* Glassmorphism Blur */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 16px;
+  border-radius: 14px;
 
   /* RETRO WEBSITE BEZEL BORDER (3D Raised Light-Refracting Edge) */
   border-top: 2px solid #1172f0;
@@ -104,15 +104,15 @@ body::-webkit-scrollbar {
 
 .top-nav a,
 .top-nav nav ul li a {
-  display: inline-block;
-  padding: 14px 32px !important;
-  margin: 6px 10px;
+  display: block;
+  padding: 8px 22px !important;
+  margin: 4px 6px;
   color: #ffffff;
-  font-weight: 600;
-  font-size: 1.2rem !important;
+  font-weight: 500;
+  font-size: 0.95rem !important;
   text-decoration: none;
   text-shadow: 0 1px 3px rgba(0, 25, 60, 0.9);
-  border-radius: 24px; /* Bubble Pill buttons */
+  border-radius: 20px; /* Bubble Pill buttons */
   
   /* Subtle glassy button style */
   background: linear-gradient(
