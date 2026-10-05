@@ -90,7 +90,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
   list-style: none;
-  padding: 12px 20px; /* Adds breathing room around the buttons inside the bar */
+  padding: 14px 20px; /* Adds breathing room around the buttons inside the bar */
 }
 
 
@@ -99,10 +99,10 @@ body::-webkit-scrollbar {
   padding: 18px 40px;
   margin: 8px 14px;
   color: #ffffff;
-  font-weight: 500;
-  font-size: 0.95rem;
+  font-weight: 700;
+  font-size: 1.2rem;
   text-decoration: none;
-  text-shadow: 0 1px 3px rgba(0, 25, 60, 0.9);
+  text-shadow: 0 2px 4px rgba(0, 25, 60, 0.9);
   border-radius: 20px; /* Bubble Pill buttons */
   
   /* Subtle glassy button style */
