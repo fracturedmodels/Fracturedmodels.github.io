@@ -136,7 +136,7 @@ body::-webkit-scrollbar {
 /* 3. MAIN CONTENT CONTAINER (GLASSERAMIC CARD) */
 .content {
   max-width: 1000px;
-  margin: 110px auto 40px auto;
+  margin: 130px auto 40px auto;
   padding: 35px;
   background: linear-gradient(
     135deg, 
