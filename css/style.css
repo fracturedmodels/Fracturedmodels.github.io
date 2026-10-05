@@ -78,15 +78,15 @@ body::-webkit-scrollbar {
     0 10px 25px rgba(40, 0, 220, 0.45);               /* Aqua drop aura */
 }
 
-.top-nav ul {
+/*.top-nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
   list-style: none;
-  padding: 4px 10px;
-}
+  padding: 8px 18px;
+} */
 
-.top-nav a {
+.top-nav  nav ul li a {
   display: block;
   padding: 8px 22px;
   margin: 4px 6px;
