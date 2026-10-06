@@ -20,7 +20,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #0b1d3a;
+  background-color: #750f8f;
   
   text-align: center;
 }
@@ -792,7 +792,7 @@ p {
     /* Explicit display and padding to force encapsulation */
     display: block;
     box-sizing: border-box;
-    padding: 12px 24px;
+    padding: 16px 32px;
 
     /* Classic Windows Vista/7 Aqua Gel Gradient & Shading */
     background: linear-gradient(
@@ -804,7 +804,7 @@ p {
 
      backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border-radius: 26px;
+    border-radius: 30px;
 
     /* Deep Retro Bezel Borders */
     border-top: 3px solid #3b82f6;
@@ -814,9 +814,9 @@ p {
 
     box-shadow: 
       inset 0 1px 0 rgba(255, 255, 255, 0.4),             
-      inset 0 -3px 12px rgba(0, 40, 90, 0.7),             
+      inset 0 -3px 16px rgba(0, 40, 90, 0.7),             
       0 0 0 1px rgba(0, 30, 80, 0.5),                     
-      0 18px 40px rgba(20, 0, 180, 0.55);                 
+      0 20px 45px rgba(20, 0, 180, 0.55);                 
   }
 
  .top-nav ul 
@@ -843,14 +843,14 @@ p {
   .top-nav a,
   .top-nav nav ul li a {
     display: inline-block;
-    padding: 6px 16px; 
-    margin: 2px 6px;    
+    padding: 5px 14px; 
+    margin: 0px 4px;    
     color: #ffffff;
-    font-weight: 600;
-    font-size: 0.85rem;   
+    font-weight: 500;
+    font-size: 0.78rem;   
     text-decoration: none;
-    text-shadow: 0 1px 3px rgba(0, 25, 60, 0.9);
-    border-radius: 14px; 
+    text-shadow: 0 1px 2px rgba(0, 25, 60, 0.9);
+    border-radius: 12px; 
     
     background: linear-gradient(
       45deg,
@@ -882,7 +882,7 @@ p {
   .content {
     width: 88%;
     max-width: 1200px;
-    margin: 120px auto 40px auto; /* Reduced top margin to remove dead space */
+    margin: 130px auto 40px auto; /* Reduced top margin to remove dead space */
 
   }
 
@@ -974,7 +974,7 @@ p {
     object-fit: contain;
   }
 
-  /* Target email container wrappers */
+  /*
   .email-container,
   .email-wrapper,
   .email-box,
@@ -989,7 +989,7 @@ p {
     overflow: hidden !important;    
   }
 
-  /* Target the email link or text itself */
+ 
   .email-container a,
   .email-wrapper a,
   .email-box a,
@@ -999,7 +999,7 @@ p {
     line-height: 1.2 !important;
   }
 
-  /* Slightly Smaller Mobile Social Media Buttons/Icons */
+
   .social-buttons a,
   .social-links a,
   .social-icons a,
@@ -1010,20 +1010,20 @@ p {
     height: auto !important;        
     min-height: 36px !important;
     
-    /* PADDING & ALIGNMENT */
+
     padding: 6px 12px !important;   
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     
-    /* TEXT SIZING & CONTAINMENT */
+
     font-size: 0.80rem !important;  
     line-height: 1.1 !important;
     white-space: nowrap !important; 
     box-sizing: border-box !important;
   }
 
-  /* Shrink Inline SVG/Img Icons Inside Social Buttons */
+
   .social-buttons img,
   .social-links img,
   .social-icons img,
@@ -1034,6 +1034,6 @@ p {
     height: 18px !important;
     margin-right: 6px !important;   
     flex-shrink: 0 !important;   
-  }
+  } */
 
 }
