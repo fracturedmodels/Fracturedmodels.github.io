@@ -785,25 +785,43 @@ p {
      top: 10px;
      left: 50%;
      transform: translateX(-50%);
-     width: 94%;
-     max-width: 480px;
-     padding: 8px 6px;
+     width: 92%;
+     max-width: 410px;
+     z-index: 1000;
      border-radius: 12px;
   }
 
- .top-nav ul {
+ .top-nav ul 
+ .top-nav nav ul {
     display: flex;
     flex-wrap: wrap; /* Lets buttons wrap to next line instead of floating off-screen */
     justify-content: center; /* Centers nav links horizontally */
     align-items: center;
-    gap: 4px;
-    padding: 0;
+    list-style: none;
+    list-style-type: none;
+    padding: 6px;
     margin: 0;
-    width: 100%;
   }
 
+  .top-nav li,
+  .top-nav nav ul li {
+    list-style: none;
+    list-style-type: none;
+    margin: 2px !importan;
+  }
+
+  .top-nav a,
+  .top-nav nav ul li a {
+    display: block !important;
+    padding: 8px 14px !important; /* Touch-friendly size without being massive */
+    font-size: 0.85rem !important;  /* Clean, legible text scale for retina screens */
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    border-radius: 20px !important;
+  }
+  
  /* 3. Button Sizing */
-  .top-nav a, nav a, .nav-btn, .navbar a {
+  nav a, .nav-btn, .navbar a {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -820,10 +838,9 @@ p {
   /* Adjust Main Content Top Margin for Mobile Nav Height */
   .content {
     width: 92%;
-    max-width: 460px;
-    margin: 85px auto 40px auto; /* Reduced top margin to remove dead space */
-    padding: 20px 16px;
-    box-sizing: border-box;
+    max-width: 100%;
+    margin: 110px auto 30px auto; /* Reduced top margin to remove dead space */
+    padding: 20px;
   }
 
 /* 
