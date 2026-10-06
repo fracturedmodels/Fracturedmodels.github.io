@@ -782,17 +782,17 @@ p {
 
  .top-nav {
      position: fixed;
-     top: 20px;
+     top: 18px;
      left: 50%;
      transform: translateX(-50%);
-     width: 90%;
-     max-width: 1200px;
+     width: 85%;
+     max-width: 1100px;
      z-index: 1000;
     
     /* Explicit display and padding to force encapsulation */
     display: block;
     box-sizing: border-box;
-    padding: 6px;
+    padding: 8px 16px;
 
     /* Classic Windows Vista/7 Aqua Gel Gradient & Shading */
     background: linear-gradient(
@@ -804,7 +804,7 @@ p {
 
      backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border-radius: 22px;
+    border-radius: 20px;
 
     /* Deep Retro Bezel Borders */
     border-top: 3px solid #3b82f6;
@@ -827,7 +827,7 @@ p {
     align-items: center;
     list-style: none;
     list-style-type: none;
-    padding: 4px 8px;
+    padding: 0;
     margin: 0;
     width: 100%;
     box-sizing: border-box;
@@ -844,14 +844,14 @@ p {
   .top-nav a,
   .top-nav nav ul li a {
     display: inline-block;
-    padding: 14px 32px; 
-    margin: 6px 10px;    
+    padding: 8px 20px; 
+    margin: 4px 8px;    
     color: #ffffff;
-    font-weight: 700;
-    font-size: 1.25rem;   
+    font-weight: 600;
+    font-size: 1rem;   
     text-decoration: none;
     text-shadow: 0 2px 4px rgba(0, 25, 60, 0.9);
-    border-radius: 28px; 
+    border-radius: 16px; 
     
     background: linear-gradient(
       45deg,
@@ -881,9 +881,9 @@ p {
 
   /* Adjust Main Content Top Margin for Mobile Nav Height */
   .content {
-    width: 88%;
-    max-width: 1250px;
-    margin: 140px auto 40px auto; /* Reduced top margin to remove dead space */
+    width: 85%;
+    max-width: 1200px;
+    margin: 110px auto 40px auto; /* Reduced top margin to remove dead space */
 
   }
 
