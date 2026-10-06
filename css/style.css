@@ -764,169 +764,154 @@ p {
 
   /* 1. Fix Nav Bar Overflow (Stack or Wrap Buttons Neatly) */
   .navbar, .nav-container, nav {
-      position: fixed !important;
-     
-     top: 0px !important;
-     left: 50% !important;
-     transform: translateX(-50%) !important;
-     width: 92% !important;
-     max-width: 100% !important;
-     height: auto !important;
-     min-height: unset !important;
-     padding: 2px 8px !important;
+     position: fixed;
+     top: 0px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 92%;
+     max-width: 100%;
+     height: auto;
+     min-height: unset;
+     padding: 2px 8px;
 
-     display: flex !important;
-     align-items: center !important;
-     justify-content: center !important;
-     box-sizing: border-box !important;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-sizing: border-box;
   }
 
  .top-nav {
-      position: fixed !important;
-     
-     top: 60px !important;
-     left: 50% !important;
-     transform: translateX(-50%) !important;
-     width: 92% !important;
-     max-width: 100% !important;
-     height: auto !important;
-     min-height: unset !important;
-     padding: 15px 8px !important;
-
-     display: flex !important;
-     align-items: center !important;
-     justify-content: center !important;
-     box-sizing: border-box !important;
+     position: fixed;
+     top: 10px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 94%;
+     max-width: 480px;
+     padding: 8px 6px;
+     border-radius: 12px;
   }
 
  .top-nav ul {
-    display: flex !important;
-    flex-wrap: wrap !important; /* Lets buttons wrap to next line instead of floating off-screen */
-    justify-content: center !important; /* Centers nav links horizontally */
-    align-items: center !important;
-    gap: 6px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
+    display: flex;
+    flex-wrap: wrap; /* Lets buttons wrap to next line instead of floating off-screen */
+    justify-content: center; /* Centers nav links horizontally */
+    align-items: center;
+    gap: 4px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
 
  /* 3. Button Sizing */
   .top-nav a, nav a, .nav-btn, .navbar a {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 0.67rem !important;
-    line-height: 1 !important;
-    font-weight: 300 !important;
-
-    /* INCREASE TOP PADDING HERE */
-    padding-top: 8px !important;    /* Raised from default 6px to push text down */
-    padding-bottom: 5px !important; /* Slightly reduced bottom padding to keep button balanced */
-    padding-left: 10px !important;
-    padding-right: 10px !important;
-    margin: 0 !important;
-    white-space: nowrap !important;
-    border-radius: 12px !important;
-    box-sizing: border-box !important;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    line-height: 1.1;
+    font-weight: 400;
+    padding: 6px 10px;
+    margin: 2px;
+    white-space: nowrap;
+    border-radius: 10px;
+    box-sizing: border-box;
   }
 
   /* Adjust Main Content Top Margin for Mobile Nav Height */
   .content {
-    width: 88% !important;     /* Slightly skinnier width on mobile screens */
-    max-width: 450px !important; /* Prevents the grid/container from stretching too wide */
-    margin-left: auto !important;
-    margin-right: auto !important;
+    width: 92%;
+    max-width: 460px;
+    margin: 85px auto 40px auto; /* Reduced top margin to remove dead space */
+    padding: 20px 16px;
+    box-sizing: border-box;
   }
 
-/* Target Contact Box / Content Containers */
+/* 
   .contact-box,
   .contact-card,
   .contact-content,
   #contact {
-    width: 82% !important;           /* Makes the box skinnier across mobile screens */
-    max-width: 380px !important;     /* Hard cap on total width */
-    margin-left: auto !important;    /* Keeps the box centered horizontally */
-    margin-right: auto !important;
-    padding: 16px 20px !important;   /* Comfortable padding for inner content */
-    box-sizing: border-box !important;
-  }
+    width: 82%;          
+    max-width: 380px;    
+    margin-left: auto;  
+    margin-right: auto;
+    padding: 16px 20px;  
+    box-sizing: border-box;
+  } */
 
   .contact-page,
   .contact-container,
   .contact-wrapper,
   #contact,
   body.contact .content {
-    width: 87% !important;           /* Makes the box skinnier across mobile screens */
-    max-width: 400px !important;     /* Hard cap on total width */
-    margin-top: 110px !important;    /* Increases clearance below fixed nav bar */
-    padding-top: 20px !important;    /* Inner top padding above contact box/title */
+    width: 92%;           /* Makes the box skinnier across mobile screens */
+    max-width: 440px;     /* Hard cap on total width */
+    margin: 110px auto 30px auto;    /* Increases clearance below fixed nav bar */
+    padding: 24px 16px;    /* Inner top padding above contact box/title */
   } 
 
   /*  Smaller Heading & Body Text Sizes */
   h1, .blood-header {
-    font-size: 1.6rem !important;
-    text-align: center !important;
-    letter-spacing: 1px !important;
-    transform: none !important;
+    font-size: 1.6rem;
+    text-align: center;
+    letter-spacing: 1px;
+    transform: none;
   }
 
   h2 {
-    font-size: 1.2rem !important;
-    text-align: center !important;
+    font-size: 1.2rem;
+    text-align: center;
   }
 
   p {
-    font-size: 0.85rem !important;
-    text-align: center !important;
+    font-size: 0.85rem;
+    text-align: center;
   }
 
- /* Target all common caption classes & HTML figcaption tags */
+ /* 
   caption,
   figcaption,
   .caption,
   .image-caption,
   .card-caption,
   .art-caption {
-    font-size: 0.72rem !important;  /* Reduced font size for mobile */
-    line-height: 1.25 !important;    /* Compact line spacing */
-    padding: 4px 8px !important;    /* Tightened inner padding */
-    margin-top: 4px !important;     /* Small gap below image/card */
-    max-width: 90% !important;      /* Keeps text contained neatly */
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
+    font-size: 0.72rem; 
+    line-height: 1.25;   
+    padding: 4px 8px;   
+    margin-top: 4px;    
+    max-width: 90%;     
+    margin-left: auto;
+    margin-right: auto;
+  } */
 
   /* 4. Center Grid Layout & Fix Image Visibility */
   .gallery-grid, .art-grid, .grid {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important; /* Centers every image/card container */
-    justify-content: center !important;
-    width: 100% !important;
-    gap: 20px !important;
-    padding: 0 !important;
-    box-sizing: border-box !important;
-    width: 88% !important;     /* Slightly skinnier width on mobile screens */
-    max-width: 450px !important; /* Prevents the grid/container from stretching too wide */
-    margin-left: auto !important;
-    margin-right: auto !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers every image/card container */
+    justify-content: center;
+    width: 100%;
+    max-width: 100%; /* Prevents the grid/container from stretching too wide */
+    gap: 16px;
+    padding: 0;
+    margin: 15px auto;
   }
 
   /* Ensure Image Containers Scale Properly */
   .gallery-item, .art-card, .glass-card, .video-item {
-    width: 100% !important;
-    max-width: 500px !important; /* Prevents items from stretching awkwardly */
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
+    width: 100%;
+    max-width: 100%; /* Prevents items from stretching awkwardly */
+    margin: 0 auto;
+    box-sizing: border-box;
   }
 
   /* Force Images to Remain Visible & Scaled Within Card */
   .gallery-item img, .art-card img, .glass-card img {
-    width: 100% !important;
-    height: auto !important; /* Preserves natural image aspect ratio */
-    max-height: none !important; /* Prevents clipping */
-    display: block !important;
-    object-fit: contain !important;
+    width: 100%;
+    height: auto; /* Preserves natural image aspect ratio */
+    max-height: none; /* Prevents clipping */
+    display: block;
+    object-fit: contain;
   }
 
   /* Target email container wrappers */
@@ -936,12 +921,12 @@ p {
   .contact-email {
     width: 100% !important;
     max-width: 100% !important;
-    padding: 8px 12px !important;    /* Compact inner padding for narrow screens */
+    padding: 8px 12px !important;   
     box-sizing: border-box !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
-    overflow: hidden !important;     /* Prevents layout overflow */
+    overflow: hidden !important;    
   }
 
   /* Target the email link or text itself */
@@ -950,7 +935,7 @@ p {
   .email-box a,
   .contact-email a,
   a[href^="mailto:"] {
-    font-size: 0.88rem !important;    /* Scaled down text size to fit screen width */
+    font-size: 0.88rem !important;  
     line-height: 1.2 !important;
   }
 
@@ -960,21 +945,21 @@ p {
   .social-icons a,
   .social-media a,
   .social-icon {
-    width: auto !important;          /* Lets button widen naturally to fit text */
-    min-width: 36px !important;      /* Ensures single icon buttons remain square/round */
-    height: auto !important;         /* Allows vertical growth if needed */
+    width: auto !important;        
+    min-width: 36px !important;  
+    height: auto !important;        
     min-height: 36px !important;
     
     /* PADDING & ALIGNMENT */
-    padding: 6px 12px !important;    /* Inner padding keeps text away from container edges */
+    padding: 6px 12px !important;   
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     
     /* TEXT SIZING & CONTAINMENT */
-    font-size: 0.80rem !important;   /* Comfortable text size */
+    font-size: 0.80rem !important;  
     line-height: 1.1 !important;
-    white-space: nowrap !important;   /* Prevents awkward single-word breaks */
+    white-space: nowrap !important; 
     box-sizing: border-box !important;
   }
 
@@ -987,8 +972,8 @@ p {
   .social-icons svg {
     width: 18px !important;
     height: 18px !important;
-    margin-right: 6px !important;    /* Space between icon and text */
-    flex-shrink: 0 !important;      /* Prevents icon from squishing */
+    margin-right: 6px !important;   
+    flex-shrink: 0 !important;   
   }
 
 }
