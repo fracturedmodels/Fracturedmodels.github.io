@@ -760,9 +760,9 @@ p {
 
  /* Force full viewport coverage safely beneath notches/Dynamic Islands */
   body {
-    width: 100% !important;
-    min-height: 100dvh !important;
-    overflow-x: hidden !important;
+    width: 100%;
+    min-height: 100dvh;
+    overflow-x: hidden;
   }
 
   /* 1. Fix Nav Bar Overflow (Stack or Wrap Buttons Neatly)
