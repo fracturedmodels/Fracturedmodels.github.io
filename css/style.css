@@ -792,7 +792,7 @@ p {
     /* Explicit display and padding to force encapsulation */
     display: block;
     box-sizing: border-box;
-    padding: 16px 32px;
+    padding: 20px 32px;
 
   /* Classic Windows Vista/7 Aqua Gel Gradient */
   background: linear-gradient(
@@ -805,7 +805,7 @@ p {
   /* Glassmorphism Blur */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-radius: 14px;
+  border-radius: 34px;
 
   /* RETRO WEBSITE BEZEL BORDER (3D Raised Light-Refracting Edge) */
   border-top: 2px solid #1172f0;
@@ -885,7 +885,7 @@ p {
   .content {
     width: 88%;
     max-width: 1200px;
-    margin: 130px auto 40px auto; /* Reduced top margin to remove dead space */
+    margin: 140px auto 40px auto; /* Reduced top margin to remove dead space */
 
   }
 
