@@ -782,13 +782,41 @@ p {
 
  .top-nav {
      position: fixed;
-     top: 10px;
+     top: 20px;
      left: 50%;
      transform: translateX(-50%);
-     width: 92%;
-     max-width: 410px;
+     width: 90%;
+     max-width: 1200px;
      z-index: 1000;
-     border-radius: 12px;
+    
+    /* Explicit display and padding to force encapsulation */
+    display: block;
+    box-sizing: border-box;
+    padding: 6px;
+
+    /* Classic Windows Vista/7 Aqua Gel Gradient & Shading */
+    background: linear-gradient(
+      180deg, 
+      rgba(30, 43, 228, 0.9) 10%, 
+      rgba(39, 3, 97, 0.75) 50%, 
+      rgba(90, 14, 161, 0.95) 100%
+    );
+
+     backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 22px;
+
+    /* Deep Retro Bezel Borders */
+    border-top: 3px solid #3b82f6;
+    border-left: 3px solid #4c1d95;
+    border-right: 3px solid #1d4ed8;
+    border-bottom: 4px solid #1e1b4b;
+
+    box-shadow: 
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),             
+      inset 0 -3px 12px rgba(0, 40, 90, 0.7),             
+      0 0 0 1px rgba(0, 30, 80, 0.5),                     
+      0 18px 40px rgba(20, 0, 180, 0.55);                 
   }
 
  .top-nav ul 
@@ -799,25 +827,41 @@ p {
     align-items: center;
     list-style: none;
     list-style-type: none;
-    padding: 6px;
+    padding: 4px 8px;
     margin: 0;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .top-nav li,
   .top-nav nav ul li {
     list-style: none;
     list-style-type: none;
-    margin: 2px !importan;
+    margin: 0;
+    padding: 0;
   }
 
   .top-nav a,
   .top-nav nav ul li a {
-    display: block !important;
-    padding: 8px 14px !important; /* Touch-friendly size without being massive */
-    font-size: 0.85rem !important;  /* Clean, legible text scale for retina screens */
-    font-weight: 600 !important;
-    text-decoration: none !important;
-    border-radius: 20px !important;
+    display: inline-block;
+    padding: 14px 32px; 
+    margin: 6px 10px;    
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;   
+    text-decoration: none;
+    text-shadow: 0 2px 4px rgba(0, 25, 60, 0.9);
+    border-radius: 28px; 
+    
+    background: linear-gradient(
+      45deg,
+      rgba(9, 94, 204, 0.45) 0%,
+      rgba(255, 255, 255, 0.1) 50%,
+      rgba(0, 0, 0, 0.25) 100%
+    );
+    border: 1.5px solid rgba(255, 255, 255, 0.65);
+    box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.85);
+    transition: all 0.2s ease-in-out;
   }
   
  /* 3. Button Sizing */
@@ -837,10 +881,10 @@ p {
 
   /* Adjust Main Content Top Margin for Mobile Nav Height */
   .content {
-    width: 92%;
-    max-width: 100%;
-    margin: 110px auto 30px auto; /* Reduced top margin to remove dead space */
-    padding: 20px;
+    width: 88%;
+    max-width: 1250px;
+    margin: 140px auto 40px auto; /* Reduced top margin to remove dead space */
+
   }
 
 /* 
