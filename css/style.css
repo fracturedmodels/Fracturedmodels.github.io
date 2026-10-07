@@ -980,7 +980,7 @@ p {
     object-fit: contain;
   }
 
-  /*
+
   .email-container,
   .email-wrapper,
   .email-box,
@@ -1040,6 +1040,6 @@ p {
     height: 18px !important;
     margin-right: 6px !important;   
     flex-shrink: 0 !important;   
-  } */
+  } 
 
 }
