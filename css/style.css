@@ -893,29 +893,6 @@ p {
   }
 
 
-  .contact-box,
-  .contact-card,
-  .contact-content,
-  #contact {
-    width: 82%;          
-    max-width: 380px;    
-    margin-left: auto;  
-    margin-right: auto;
-    padding: 8px 16px;  
-    box-sizing: border-box;
-  } 
-
-  .contact-page,
-  .contact-container,
-  .contact-wrapper,
-  #contact,
-  body.contact .content {
-    width: 92%;           /* Makes the box skinnier across mobile screens */
-    max-width: 440px;     /* Hard cap on total width */
-    margin: 110px auto 30px auto;    /* Increases clearance below fixed nav bar */
-    padding: 24px 16px;    /* Inner top padding above contact box/title */
-  } 
-
   /*  Smaller Heading & Body Text Sizes */
   h1, .blood-header {
     font-size: 1.6rem;
@@ -934,21 +911,6 @@ p {
     text-align: center;
   }
 
- /* 
-  caption,
-  figcaption,
-  .caption,
-  .image-caption,
-  .card-caption,
-  .art-caption {
-    font-size: 0.72rem; 
-    line-height: 1.25;   
-    padding: 4px 8px;   
-    margin-top: 4px;    
-    max-width: 90%;     
-    margin-left: auto;
-    margin-right: auto;
-  } */
 
   /* 4. Center Grid Layout & Fix Image Visibility */
   .gallery-grid, .art-grid, .grid {
@@ -980,66 +942,36 @@ p {
     object-fit: contain;
   }
 
-
-  .email-container,
-  .email-wrapper,
-  .email-box,
-  .contact-email {
-    width: 100% !important;
-    max-width: 100% !important;
-    padding: 8px 12px !important;   
-    box-sizing: border-box !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    overflow: hidden !important;    
+  /* 1. Shrink and contain the email item text */
+  .contact-info-item {
+    font-size: 0.85rem;
+    word-break: break-all; /* Prevents long email addresses from clipping off mobile screens */
+    padding: 0 10px;
   }
 
- 
-  .email-container a,
-  .email-wrapper a,
-  .email-box a,
-  .contact-email a,
-  a[href^="mailto:"] {
-    font-size: 0.88rem !important;  
-    line-height: 1.2 !important;
+  .contact-info-item a {
+    font-size: 0.85rem;
   }
 
-
-  .social-buttons a,
-  .social-links a,
-  .social-icons a,
-  .social-media a,
-  .social-icon {
-    width: auto !important;        
-    min-width: 36px !important;  
-    height: auto !important;        
-    min-height: 36px !important;
-    
-
-    padding: 6px 12px !important;   
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    
-
-    font-size: 0.80rem !important;  
-    line-height: 1.1 !important;
-    white-space: nowrap !important; 
-    box-sizing: border-box !important;
+  /* 2. Shrink all social buttons and the form submit button */
+  .social-btn {
+    display: block;
+    width: 85%;           /* Keeps them neat and centered instead of full stretching */
+    max-width: 280px;     /* Caps their maximum size so they don't get too wide */
+    margin: 8px auto;     /* Centers them automatically */
+    padding: 10px 16px;   /* Slimmer mobile padding */
+    font-size: 0.85rem;   /* Smaller, cleaner font size */
+    box-sizing: border-box;
+    text-align: center;
   }
 
-
-  .social-buttons img,
-  .social-links img,
-  .social-icons img,
-  .social-buttons svg,
-  .social-links svg,
-  .social-icons svg {
-    width: 18px !important;
-    height: 18px !important;
-    margin-right: 6px !important;   
-    flex-shrink: 0 !important;   
-  } 
+  /* 3. Tighten up the social links container layout */
+  .social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+  }
 
 }
